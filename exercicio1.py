@@ -1,5 +1,6 @@
 # 1: Cálculo de desconto
 
+
 value_account = int(input(f"Qual o valor da conta: "))
 value_discount = int(input(f"Qual o valor do desconto a ser aplicado: "))
 

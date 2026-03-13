@@ -5,4 +5,4 @@ calculator = int(input(f"Qual operação básica você deseja realizar:",
 
 if (calculator == 1):
   print(f"Calculando adição:")
-  int(input())
+  number_one = int(input("Digite o primeiro número:"))

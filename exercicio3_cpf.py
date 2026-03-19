@@ -5,7 +5,7 @@ resp = "SIM"
 
 while resp == "SIM":
   cpf = input("\033[34mDigite seu CPF:\033[0m ")
-
+#O método isdigit() em Python é uma função embutida que verifica se todos os caracteres de uma string são dígitos numéricos
   print("=#=" * 30)
   if len(cpf) != 11 or not cpf.isdigit():
       print("O cpf precisa ter 11 dígitos e aceita apenas números!!")

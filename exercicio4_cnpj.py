@@ -5,7 +5,7 @@ resp = "SIM"
 
 while resp == "SIM":
   cnpj = input("\033[34mDigite seu CNPJ:\033[0m ")
-
+#O método isdigit() em Python é uma função embutida que verifica se todos os caracteres de uma string são dígitos numéricos
   print("=#=" * 30)
   if len(cnpj) != 14 or not cnpj.isdigit():
       print("O cnpj precisa ter 14 dígitos e aceita apenas números!!")

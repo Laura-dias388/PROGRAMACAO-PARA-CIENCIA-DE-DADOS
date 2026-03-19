@@ -1,6 +1,6 @@
 # 5: Sistema de menu de usuários
 
-usuarios = []
+users = []
 
 while True:
     print("MENU:")
@@ -11,52 +11,53 @@ while True:
     print("5 - Listar todos os usuários")
     print("9 - Sair")
     
-    opcao = input("Digite a opção desejada: ")
-    if opcao == "1":
-        nome = input("Digite o nome do usuário: ")
-        usuarios.append(nome)
-        print(f"Usuário '{nome}' incluído com sucesso.")
+    option = input("Digite a opção desejada: ")
+    if option == "1":
+        name = input("Digite o nome do usuário: ")
+        users.append(name)
+        print(f"Usuário '{name}' incluído com sucesso.")
         print("=#=" * 30)
 
-    elif opcao == "2":
-        nome = input("Digite o nome do usuário a ser excluído: ")
-        if nome in usuarios:
-            usuarios.remove(nome)
-            print(f"Usuário '{nome}' excluído com sucesso.")
+    elif option == "2":
+        name = input("Digite o nome do usuário a ser excluído: ")
+        if name in users:
+            users.remove(name)
+            print(f"Usuário '{name}' excluído com sucesso.")
         else:
-            print(f"Usuário '{nome}' não encontrado.")
+            print(f"Usuário '{name}' não encontrado.")
         print("=#=" * 30)
 
-    elif opcao == "3":
-        nome = input("Digite o nome do usuário a ser consultado: ")
-        if nome in usuarios:
-            print(f"Usuário '{nome}' encontrado.")
+    elif option == "3":
+        name = input("Digite o nome do usuário a ser consultado: ")
+        if name in users:
+            print(f"Usuário '{name}' encontrado.")
         else:
-            print(f"Usuário '{nome}' não encontrado.")
+            print(f"Usuário '{name}' não encontrado.")
         print("=#=" * 30)
 
-    elif opcao == "4":
-        nome_antigo = input("Digite o nome do usuário a ser alterado: ")
-        if nome_antigo in usuarios:
-            indice = usuarios.index(nome_antigo)
-            novo_nome = input("Digite o novo nome: ")
-            usuarios[indice] = novo_nome
-            print(f"Usuário '{nome_antigo}' alterado para '{novo_nome}'.")
+    elif option == "4":
+        old_name = input("Digite o nome do usuário a ser alterado: ")
+        if old_name in users:
+            index = users.index(old_name)
+            updated_name = input("Digite o novo nome: ")
+            users[index] = updated_name
+            print(f"Usuário '{old_name}' alterado para '{updated_name}'.")
         else:
-            print(f"Usuário '{nome_antigo}' não encontrado.")
+            print(f"Usuário '{old_name}' não encontrado.")
         print("=#=" * 30)
 
-    elif opcao == "5":
-        if len(usuarios) == 0:
+    elif option == "5":
+        if len(users) == 0:
             print("Não há usuários cadastrados.")
         else:
             print("Usuários cadastrados:")
-            for nome in usuarios:
-                print(f"- {nome}")
+            for name in users:
+                print("=#=" * 30)
+                print(f"- {name}")
                 print("=#=" * 30)
                 
-    elif opcao == "9":
-        print("Saindo do programa...")
+    elif option == "9":
+        print("Você clicou 9 para sair...")
         break
     else:
         print("Opção inválida. Tente novamente.")
